@@ -1,4 +1,4 @@
 # unknown
 
-siema stara, to 2 zadania ma byc z uzyciem foldLeft sprawdz cyz jest takie
-b hucytc
+siema stara, to 2 zadania ma byc z uzyciem foldLeft sprawdz cyz jest takie 
+dobry, co to scala?
