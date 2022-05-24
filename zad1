@@ -1,0 +1,19 @@
+def isOrdered[A](leq: (A, A) => Boolean)(l: List[A]): Boolean = {
+    @annotation.tailrec
+    def isOrdered2(leq: (A,A) => Boolean)(l: List[A]): Boolean = {
+        l match{
+            case Nil => true
+            case head :: Nil => true
+            case first :: second :: tail if(leq(first, second)) => isOrdered2(leq)(second :: tail)
+            case first :: second :: tail => false
+        }
+    }
+    isOrdered2(leq)(l)
+}
+
+@main
+def zadanie_17: Unit = {
+    val l = List(1,2,2,5)
+    val lt = (m: Int, n: Int) => m <= n
+    println(isOrdered(lt)(l))
+}
